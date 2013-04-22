@@ -7,6 +7,7 @@
 //
 
 #import "CITViewController.h"
+#import "CITFoursquareAPI.h"
 
 @interface CITViewController ()
 
@@ -14,16 +15,17 @@
 
 @implementation CITViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    CITFoursquareLocationCoordinate coordinate = CITFoursquareLocationCoordinateMake(44.3, 37.2);
+    
+    CITFoursquareAPI *foursquareAPI = [CITFoursquareAPI sharedInstance];
+    [foursquareAPI venuesAtLocation:coordinate withCompletion:^(BOOL success, id response, NSError *error) {
+        if (success) {
+            NSLog(@"Response: %@", response);
+        } else {
+            NSLog(@"Error: %@", error);
+        }
+    }];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end

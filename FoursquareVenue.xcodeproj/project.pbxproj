@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74E95D44902D4EEFB27D941D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BC3307EBD24F6EA8CF42BC /* libPods.a */; };
 		C05F542E1725F68A0040B537 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F542D1725F68A0040B537 /* UIKit.framework */; };
 		C05F54301725F68A0040B537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F542F1725F68A0040B537 /* Foundation.framework */; };
 		C05F54321725F68A0040B537 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F54311725F68A0040B537 /* CoreGraphics.framework */; };
@@ -18,9 +19,11 @@
 		C05F54441725F68A0040B537 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C05F54431725F68A0040B537 /* Default-568h@2x.png */; };
 		C05F54471725F68A0040B537 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05F54451725F68A0040B537 /* MainStoryboard.storyboard */; };
 		C05F544A1725F68A0040B537 /* CITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05F54491725F68A0040B537 /* CITViewController.m */; };
+		C05F54551725F8080040B537 /* CITFoursquareAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C05F54541725F8080040B537 /* CITFoursquareAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97B07BC23B2C421A910CDC63 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C05F542A1725F68A0040B537 /* FoursquareVenue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareVenue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05F542D1725F68A0040B537 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C05F542F1725F68A0040B537 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +40,9 @@
 		C05F54461725F68A0040B537 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C05F54481725F68A0040B537 /* CITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CITViewController.h; sourceTree = "<group>"; };
 		C05F54491725F68A0040B537 /* CITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CITViewController.m; sourceTree = "<group>"; };
+		C05F54531725F8080040B537 /* CITFoursquareAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CITFoursquareAPI.h; path = Model/CITFoursquareAPI.h; sourceTree = "<group>"; };
+		C05F54541725F8080040B537 /* CITFoursquareAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CITFoursquareAPI.m; path = Model/CITFoursquareAPI.m; sourceTree = "<group>"; };
+		D2BC3307EBD24F6EA8CF42BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 				C05F542E1725F68A0040B537 /* UIKit.framework in Frameworks */,
 				C05F54301725F68A0040B537 /* Foundation.framework in Frameworks */,
 				C05F54321725F68A0040B537 /* CoreGraphics.framework in Frameworks */,
+				74E95D44902D4EEFB27D941D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 				C05F54331725F68A0040B537 /* FoursquareVenue */,
 				C05F542C1725F68A0040B537 /* Frameworks */,
 				C05F542B1725F68A0040B537 /* Products */,
+				97B07BC23B2C421A910CDC63 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +84,7 @@
 				C05F542D1725F68A0040B537 /* UIKit.framework */,
 				C05F542F1725F68A0040B537 /* Foundation.framework */,
 				C05F54311725F68A0040B537 /* CoreGraphics.framework */,
+				D2BC3307EBD24F6EA8CF42BC /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,11 +92,9 @@
 		C05F54331725F68A0040B537 /* FoursquareVenue */ = {
 			isa = PBXGroup;
 			children = (
-				C05F543C1725F68A0040B537 /* CITAppDelegate.h */,
-				C05F543D1725F68A0040B537 /* CITAppDelegate.m */,
-				C05F54451725F68A0040B537 /* MainStoryboard.storyboard */,
-				C05F54481725F68A0040B537 /* CITViewController.h */,
-				C05F54491725F68A0040B537 /* CITViewController.m */,
+				C05F54521725F7DB0040B537 /* View */,
+				C05F54511725F7D10040B537 /* Controller */,
+				C05F54501725F7CC0040B537 /* Model */,
 				C05F54341725F68A0040B537 /* Supporting Files */,
 			);
 			path = FoursquareVenue;
@@ -96,6 +103,8 @@
 		C05F54341725F68A0040B537 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C05F543C1725F68A0040B537 /* CITAppDelegate.h */,
+				C05F543D1725F68A0040B537 /* CITAppDelegate.m */,
 				C05F54351725F68A0040B537 /* FoursquareVenue-Info.plist */,
 				C05F54361725F68A0040B537 /* InfoPlist.strings */,
 				C05F54391725F68A0040B537 /* main.m */,
@@ -105,6 +114,32 @@
 				C05F54431725F68A0040B537 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C05F54501725F7CC0040B537 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C05F54531725F8080040B537 /* CITFoursquareAPI.h */,
+				C05F54541725F8080040B537 /* CITFoursquareAPI.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C05F54511725F7D10040B537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C05F54481725F68A0040B537 /* CITViewController.h */,
+				C05F54491725F68A0040B537 /* CITViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C05F54521725F7DB0040B537 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C05F54451725F68A0040B537 /* MainStoryboard.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +152,7 @@
 				C05F54261725F68A0040B537 /* Sources */,
 				C05F54271725F68A0040B537 /* Frameworks */,
 				C05F54281725F68A0040B537 /* Resources */,
+				189E2E0E56354334B0EB3358 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,6 +205,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		189E2E0E56354334B0EB3358 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C05F54261725F68A0040B537 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -177,6 +230,7 @@
 				C05F543A1725F68A0040B537 /* main.m in Sources */,
 				C05F543E1725F68A0040B537 /* CITAppDelegate.m in Sources */,
 				C05F544A1725F68A0040B537 /* CITViewController.m in Sources */,
+				C05F54551725F8080040B537 /* CITFoursquareAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +314,7 @@
 		};
 		C05F544E1725F68A0040B537 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97B07BC23B2C421A910CDC63 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoursquareVenue/FoursquareVenue-Prefix.pch";
@@ -271,6 +326,7 @@
 		};
 		C05F544F1725F68A0040B537 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97B07BC23B2C421A910CDC63 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoursquareVenue/FoursquareVenue-Prefix.pch";
@@ -299,6 +355,7 @@
 				C05F544F1725F68A0040B537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
